@@ -8,7 +8,12 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; background-color: beige;}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; background-color:beige;}
 .w3-row-padding img {margin-bottom: 12px}
 .bgimg {
   background-position: center;
@@ -17,6 +22,52 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; background-color
   background-image: url('laptop.jpg');
   min-height: 100%;
 }
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 25px 2px;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: rgb(239, 239, 239);
+  color: black;
+  border: 2px solid #e3e3e3;
+}
+
+.button1:hover {
+  background-color: #e3e3e3;
+  color: black;
+}
+
+.a {
+  text-decoration: none;
+}
+
+
+p, h2 {
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    translate: 150vw 0;
+    scale: 200% 1;
+  }
+
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
+}
+
 
 .map-responsive{
 overflow:hidden;
@@ -42,6 +93,7 @@ position:absolute;
   <div class="bgimg"></div>
 </nav>
 
+
 <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
 <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
   <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
@@ -55,21 +107,22 @@ position:absolute;
   </div>
 </nav>
 
+
 <!-- Page Content -->
 <div class="w3-main w3-padding-large" style="margin-left:40%">
+
 
   <!-- Menu icon to open sidebar -->
   <span class="w3-button w3-top w3-beige w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
 
+
   <!-- Header -->
   <header class="w3-container w3-center" style="padding:128px 16px" id="index.html">
     <h1 class="w3-jumbo"><b>Choy Chung</b></h1>
-    <p>test IT student in Haaga-Helia, campus of Pasila</p>
-    <img src="laptop.jpg" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
-    <img src="laptop.jpg" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
-    <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
-      <a href="#contact.html" class="w3-bar-item w3-button w3-text-black" onclick="closeNav()">Contact Me </a>
-    </button>
+    <p>IT student in Haaga-Helia, campus of Pasila</p>
+    <img src="laptop.jpg" alt="laptop" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
+    <img src="laptop.jpg" alt="laptop" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
+      <a href="#contact.html" class="button button1" onclick="closeNav()">Contact Me </a>
   </header>
 
 
@@ -79,10 +132,9 @@ position:absolute;
     <h2>About</h2>
     <hr class="w3-opacity">
     <p>I reside in Espoo. Video games and group activities are my passion. ITBBA Business Information Technology
-      Bachelor of Business Administration
+      Bachelor of Business Administration. Kesken
     </p>
     
-  <!-- End About Section -->
   </div>
 
 
@@ -91,13 +143,11 @@ position:absolute;
    <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="experience.html">
     <h2>Experience</h2>
     <hr class="w3-opacity">
-    <p>I reside in Espoo. Video games and group activities are my passion.
+    <p> Kesken
     </p>
 
-   <!-- End Experience Section -->
   </div>
     
-  
 
   
   <!-- Contact Section -->
@@ -107,7 +157,7 @@ position:absolute;
 
     <div class="w3-section">
       <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Espoo, Uusimaa</p>
-      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> +358 409647923</p>
+      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> +358 123456789</p>
       <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> choychung@myy.haaga-helia.fi</p>
     </div>
     
@@ -117,16 +167,15 @@ position:absolute;
     </div>
    
     <p>Lets get in touch. Send me a message:</p>
-    <form action="/action_page.php" target="_blank">
+    <form action="/action_page.php" method="post">
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
       <p>
         <a href="mailto:choychung@myy.haaga-helia.fi">
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button></a>
+          <input type="submit" value="Send Message">
+        </a>
       </p>
     </form>
   <!-- End Contact Section -->
