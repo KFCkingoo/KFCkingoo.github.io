@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Choy's portfolio</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Choy's portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 <style>
 
-html {
+html{
   scroll-behavior: smooth;
 }
 
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; background-color:beige;}
+
+body, h1,h2{font-family: "Montserrat", sans-serif; background-color:beige;}
 .w3-row-padding img {margin-bottom: 12px}
 .bgimg {
   background-position: center;
@@ -22,28 +24,55 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; background-color
   background-image: url('laptop.jpg');
   min-height: 100%;
 }
+h2, p {color: grey;}
+
+
+.button {
+  border: none;
+  color: white;
+  padding: 14px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 40px 2px;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: rgb(239, 239, 239);
+  color: black;
+  border: 2px solid #e3e3e3;
+}
+
+.button1:hover {
+  background-color: #e3e3e3;
+  color: black;
+}
 
 .a {
   text-decoration: none;
 }
 
 
-p, h2 {
-  animation-duration: 2s;
-  animation-name: slidein;
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 2s;
 }
 
-@keyframes slidein {
-  from {
-    translate: 150vw 0;
-    scale: 200% 1;
-  }
-
-  to {
-    translate: 0 0;
-    scale: 100% 1;
+@media(prefers-reduced-motion) {
+  .hidden {
+    transition: none;
   }
 }
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+}
+
 
 
 .map-responsive{
@@ -62,7 +91,6 @@ position:absolute;
 
 
 </style>
-</head>
 <body>
 
 <!-- Sidebar with image -->
@@ -89,6 +117,7 @@ position:absolute;
 <div class="w3-main w3-padding-large" style="margin-left:40%">
 
 
+
   <!-- Menu icon to open sidebar -->
   <span class="w3-button w3-top w3-beige w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
 
@@ -97,50 +126,43 @@ position:absolute;
   <header class="w3-container w3-center" style="padding:128px 16px" id="index.html">
     <h1 class="w3-jumbo"><b>Choy Chung</b></h1>
     <p>IT student in Haaga-Helia, campus of Pasila</p>
-    <img src="laptop.jpg" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
-    <img src="laptop.jpg" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
-    <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
-      <a href="#contact.html" class="w3-bar-item w3-button w3-text-black" onclick="closeNav()">Contact Me </a>
-    </button>
+    <img src="laptop.jpg" alt="laptop" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
+    <img src="laptop.jpg" alt="laptop" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
+      <a href="#contact.html" class="button button1" onclick="closeNav()">Contact Me </a>
   </header>
 
 
 
   <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about.html">
+  <section class="hidden" id ="about.html" style="margin-bottom: 50vh;">
     <h2>About</h2>
-    <hr class="w3-opacity">
     <p>I reside in Espoo. Video games and group activities are my passion. ITBBA Business Information Technology
-      Bachelor of Business Administration. Kesken
+      Bachelor of Business Administration. Kesken.
     </p>
-    
-  </div>
+  </section>
 
 
 
    <!-- Experience Section -->
-   <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="experience.html">
+  <section class="hidden" id ="experience.html" style="margin-bottom: 50vh;">
     <h2>Experience</h2>
-    <hr class="w3-opacity">
     <p> Kesken
     </p>
-
-  </div>
-    
+  </section>
 
   
   <!-- Contact Section -->
-  <div class="w3-padding-32 w3-content w3-text-grey" id="contact.html" style="margin-bottom:64px">
-    <h2>Contact Me</h2>
-    <hr class="w3-opacity">
 
-    <div class="w3-section">
+
+  <section class="hidden" id="contact.html">
+    <h2>Contact Me</h2>
+    <div class="w3-section"></div>
       <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Espoo, Uusimaa</p>
       <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> +358 123456789</p>
       <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> choychung@myy.haaga-helia.fi</p>
-    </div>
-    
-    <!-- Image of location/map -->
+  </section>
+
+      <!-- Image of location/map -->
     <div class="map-responsive">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1982.736199295731!2d24.929691926953122!3d60.20164850000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469208606a60874b%3A0x50a651a72fbb180b!2sHaaga-Helia%20ammattikorkeakoulu!5e0!3m2!1sfi!2sfi!4v1727008527352!5m2!1sfi!2sfi" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
@@ -153,14 +175,12 @@ position:absolute;
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
       <p>
         <a href="mailto:choychung@myy.haaga-helia.fi">
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button></a>
+          <input type="submit" value="Send Message" style="margin-bottom: 50px;">
+        </a>
       </p>
     </form>
   <!-- End Contact Section -->
-  </div>  
-  
+
   <!-- Footer -->
   <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -170,7 +190,6 @@ position:absolute;
     <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
   <!-- End footer -->
   </footer>
-  
 <!-- END PAGE CONTENT -->
 </div>
 
@@ -184,6 +203,28 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidebar").style.display = "none";
 }
+</script>
+
+<script>
+
+function animate() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry)
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        });
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
+
+}
+animate();
+
 </script>
 
 </body>

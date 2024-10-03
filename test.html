@@ -9,11 +9,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 
-html {
+html{
   scroll-behavior: smooth;
 }
 
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; background-color:beige;}
+
+body, h1,h2{font-family: "Montserrat", sans-serif; background-color:beige;}
 .w3-row-padding img {margin-bottom: 12px}
 .bgimg {
   background-position: center;
@@ -23,15 +24,17 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; background-color
   min-height: 100%;
 }
 
+h2, p {color: grey;}
+
 .button {
   border: none;
   color: white;
-  padding: 16px 32px;
+  padding: 14px 30px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 25px 2px;
+  margin: 40px 2px;
   cursor: pointer;
 }
 
@@ -51,22 +54,20 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; background-color
 }
 
 
-p, h2 {
+
+@keyframes slideanim {
+  from { opacity: 0; scale: 1; transform: translateX(500px);}
+
+  to { opacity: 1; scale: 1; transform: translateX(0);}
+  }
+
+
+section {
   animation-duration: 2s;
-  animation-name: slidein;
+  animation-name: slideanim;
+
 }
 
-@keyframes slidein {
-  from {
-    translate: 150vw 0;
-    scale: 200% 1;
-  }
-
-  to {
-    translate: 0 0;
-    scale: 100% 1;
-  }
-}
 
 
 .map-responsive{
@@ -112,6 +113,7 @@ position:absolute;
 <div class="w3-main w3-padding-large" style="margin-left:40%">
 
 
+
   <!-- Menu icon to open sidebar -->
   <span class="w3-button w3-top w3-beige w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
 
@@ -128,40 +130,35 @@ position:absolute;
 
 
   <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about.html">
-    <h2>About</h2>
-    <hr class="w3-opacity">
+  <section id ="about.html" style="margin-bottom: 100px;">
+    <h2 class ="animate">About</h2>
     <p>I reside in Espoo. Video games and group activities are my passion. ITBBA Business Information Technology
-      Bachelor of Business Administration. Kesken
+      Bachelor of Business Administration. Kesken.
     </p>
-    
-  </div>
+  </section>
 
 
 
    <!-- Experience Section -->
-   <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="experience.html">
-    <h2>Experience</h2>
-    <hr class="w3-opacity">
+  <section id ="experience.html" style="margin-bottom: 100px;">
+    <h2 class ="animate">Experience</h2>
     <p> Kesken
     </p>
-
-  </div>
-    
+  </section>
 
   
   <!-- Contact Section -->
-  <div class="w3-padding-32 w3-content w3-text-grey" id="contact.html" style="margin-bottom:64px">
-    <h2>Contact Me</h2>
-    <hr class="w3-opacity">
 
-    <div class="w3-section">
+
+  <section id="contact.html">
+    <h2 class="animate">Contact Me</h2>
+    <div class="w3-section"></div>
       <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Espoo, Uusimaa</p>
       <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> +358 123456789</p>
       <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> choychung@myy.haaga-helia.fi</p>
-    </div>
-    
-    <!-- Image of location/map -->
+  </section>
+
+      <!-- Image of location/map -->
     <div class="map-responsive">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1982.736199295731!2d24.929691926953122!3d60.20164850000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469208606a60874b%3A0x50a651a72fbb180b!2sHaaga-Helia%20ammattikorkeakoulu!5e0!3m2!1sfi!2sfi!4v1727008527352!5m2!1sfi!2sfi" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
@@ -174,13 +171,12 @@ position:absolute;
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
       <p>
         <a href="mailto:choychung@myy.haaga-helia.fi">
-          <input type="submit" value="Send Message">
+          <input type="submit" value="Send Message" style="margin-bottom: 50px;">
         </a>
       </p>
     </form>
   <!-- End Contact Section -->
-  </div>  
-  
+
   <!-- Footer -->
   <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -190,7 +186,6 @@ position:absolute;
     <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
   <!-- End footer -->
   </footer>
-  
 <!-- END PAGE CONTENT -->
 </div>
 
@@ -204,6 +199,28 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidebar").style.display = "none";
 }
+</script>
+
+<script>
+
+function animate() {
+document.addEventListener("DOMContentLoaded,", () => {
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+      return;
+    }
+    entry.target.classList.remove('in-view');
+  });
+});
+
+const allAnimatedElements = document.querySelectorAll('.animate');
+allAnimatedElements.forEach((element) => observer.observe(element));
+});
+}
+
 </script>
 
 </body>
