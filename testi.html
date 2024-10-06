@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Choy's portfolio</title>
+  <title>Choy - Portfolio</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -24,7 +24,16 @@ body, h1,h2{font-family: "Montserrat", sans-serif; background-color:beige;}
   background-image: url('laptop.jpg');
   min-height: 100%;
 }
-h2, p {color: grey;}
+
+h2 {
+  color: grey;
+  padding-top: 50px;
+}
+p {
+  color: grey;
+}
+
+
 
 
 .button {
@@ -50,7 +59,7 @@ h2, p {color: grey;}
   color: black;
 }
 
-.a {
+a {
   text-decoration: none;
 }
 
@@ -73,6 +82,11 @@ h2, p {color: grey;}
     filter: blur(0);
 }
 
+.video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  margin-block: 50px;
+}
 
 
 .map-responsive{
@@ -125,7 +139,7 @@ position:absolute;
   <!-- Header -->
   <header class="w3-container w3-center" style="padding:128px 16px" id="index.html">
     <h1 class="w3-jumbo"><b>Choy Chung</b></h1>
-    <p>IT student in Haaga-Helia, campus of Pasila</p>
+    <p>IT-tradenomin opiskelija ITBBA Haaga-Heliassa, Pasilan kampus </p>
     <img src="laptop.jpg" alt="laptop" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
     <img src="laptop.jpg" alt="laptop" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
       <a href="#contact.html" class="button button1" onclick="closeNav()">Contact Me </a>
@@ -134,20 +148,21 @@ position:absolute;
 
 
   <!-- About Section -->
-  <section class="hidden" id ="about.html" style="margin-bottom: 50vh;">
+  <section class="hidden" id ="about.html">
     <h2>About</h2>
-    <p>I reside in Espoo. Video games and group activities are my passion. ITBBA Business Information Technology
-      Bachelor of Business Administration. Kesken.
-    </p>
+    <p>Olen kotoisin Espoosta. Videopelit ja ryhmäaktiviteetit ovat intohimoni. Niissä saa tavata uusia ihmisiä ja jatkuvasti kehittää omia taitoja. Videopelit ovat monipuolisia, olen päässyt organisoimaan tiimejä, taktikoinut suunnitelmia ja jopa johtanut ryhmää tarvittaessa. Nautin myös muiden ihmisten opastusta eri kielillä.</p>
+    <p>Seuraan myös monta urheilua ja arvostan että ne perustuvat aina tiimihenkisyyteen olipa se tiimi- tai yksinurheilu. Katson tiimihenkisyyden olevan tärkeä myös töiden tavoitteissa.</p>
+    <iframe class="video"  src="https://www.youtube.com/embed/YkeKdrPjC7s?si=CI4axa4ItfYHWmbp"
+     frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </section>
 
 
 
    <!-- Experience Section -->
-  <section class="hidden" id ="experience.html" style="margin-bottom: 50vh;">
+  <section class="hidden" id ="experience.html">
     <h2>Experience</h2>
-    <p> Kesken
-    </p>
+    <p>Töissä tuli sovellettua ongelmanratkaisukykyä ja asiakaspalvelutaitoja. Black Friday - kampanjan aikana taas hoidettiin asiat omaan tahtiin, jotta asiakaspalvelu pysyisi kohdallaan. Odotan innolla, että saan tutustua teihin ja kerrota itsestäni hieman enemmän.</p>
+    <p>Lets Go Team!</p>
   </section>
 
   
@@ -167,23 +182,25 @@ position:absolute;
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1982.736199295731!2d24.929691926953122!3d60.20164850000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469208606a60874b%3A0x50a651a72fbb180b!2sHaaga-Helia%20ammattikorkeakoulu!5e0!3m2!1sfi!2sfi!4v1727008527352!5m2!1sfi!2sfi" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
    
-    <p>Lets get in touch. Send me a message:</p>
-    <form action="https://formsubmit.co/el/wowizo" method="POST">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-padding-32 w3-border" type="text" placeholder="Message" required name="Message"></p>
-      <p><input type="submit" value="Send Message" style="margin-bottom: 50px;"></p>
+    <p>Ota yhteyttä. Lähetä minulle viesti:</p>
+    <form action="https://formsubmit.co/44caaa2eee13f76db0996877dcd693b1" method="POST">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nimi" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Sähköposti" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Aihe" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-32 w3-border" type="text" placeholder="Viesti" required name="Message"></p>
+      <p><input type="submit" value="Lähetä" style="margin-bottom: 50px;"></p>
     </form>
   <!-- End Contact Section -->
 
   <!-- Footer -->
   <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+    
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <a href="https://github.com/KFCkingoo/KFCkingoo"
+      i class="fa fa-github w3-hover-opacity"></a>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+    <p class="w3-medium">2024</p>
   <!-- End footer -->
   </footer>
 <!-- END PAGE CONTENT -->
@@ -213,6 +230,8 @@ function animate() {
                 entry.target.classList.remove('show');
             }
         });
+    }, {
+      threshold: 0.55
     });
 
     const hiddenElements = document.querySelectorAll('.hidden');
