@@ -8,12 +8,13 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
-
+    /* Smooth scrolling upon navigation */
     html{
       scroll-behavior: smooth;
     }
     
-    
+
+    /* Font styling */
     body, h1,h2{font-family: "Montserrat", sans-serif; background-color:beige;}
     .w3-row-padding img {margin-bottom: 12px}
     .bgimg {
@@ -28,13 +29,13 @@
       color: grey;
       margin-top: 50px;
     }
+
     p {
       color: grey;
     }
     
-    
-    
-    
+
+    /* Button styling */
     .button {
       border: none;
       color: white;
@@ -58,12 +59,14 @@
       color: black;
     }
     
+
+    /* URL underline removal */
     a {
       text-decoration: none;
     }
     
     
-    
+    /* Content animation when in view */
     .hidden {
         opacity: 0;
         filter: blur(5px);
@@ -81,6 +84,8 @@
         filter: blur(0);
     }
     
+
+    /* Video styling */
     .video {
       aspect-ratio: 16 / 9;
       width: 100%;
@@ -89,6 +94,7 @@
     }
     
     
+    /* Map styling */
     .map-responsive{
     overflow:hidden;
     padding-bottom:56.25%;
@@ -103,8 +109,6 @@
     width:100%;
     position:absolute;
     }
-    
-    
     </style>
 </head>
 <body>
@@ -148,7 +152,6 @@
   </header>
 
 
-
   <!-- About Section -->
   <section class="hidden" id ="about.html">
     <h2>Minusta</h2>
@@ -157,7 +160,6 @@
     <iframe class="video"  src="https://www.youtube.com/embed/YkeKdrPjC7s?si=CI4axa4ItfYHWmbp"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </section>
-
 
 
    <!-- Experience Section -->
@@ -169,8 +171,6 @@
 
   
   <!-- Contact Section -->
-
-
   <section class="hidden" id="contact.html">
     <h2>Yhteystiedot</h2>
     <div class="w3-section"></div>
@@ -179,11 +179,11 @@
       <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> choy.chung@myy.haaga-helia.fi</p>
   </section>
 
+
       <!-- Image of location/map -->
     <div class="map-responsive">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1982.736199295731!2d24.929691926953122!3d60.20164850000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469208606a60874b%3A0x50a651a72fbb180b!2sHaaga-Helia%20ammattikorkeakoulu!5e0!3m2!1sfi!2sfi!4v1727008527352!5m2!1sfi!2sfi" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-   
     <p>Ota yhteyttä. Lähetä minulle viesti:</p>
     <form action="https://formsubmit.co/44caaa2eee13f76db0996877dcd693b1" method="POST">
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nimi" required name="Name"></p>
@@ -194,9 +194,9 @@
     </form>
   <!-- End Contact Section -->
 
+
   <!-- Footer -->
   <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
-    
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>
     <a href="https://github.com/KFCkingoo/KFCkingoo"
@@ -215,13 +215,15 @@ function openNav() {
   document.getElementById("mySidebar").style.display = "block";
 }
 
+
 function closeNav() {
   document.getElementById("mySidebar").style.display = "none";
 }
 </script>
 
-<script>
 
+<script>
+// Animation function
 function animate() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -241,7 +243,6 @@ function animate() {
 
 }
 animate();
-
 </script>
 
 </body>
